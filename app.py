@@ -12,6 +12,16 @@ app.permanent_session_lifetime = timedelta(hours=1)
 
 db = SQLAlchemy(app)
 
+class Users(db.Model):
+    _id = db.Column('id',db.Integer,primary_key=True)
+    username = db.Column(username,db.String(200))
+    password = db.Column(password,db.String(200))
+
+    def __init__(self,username,password):
+        self.username = username
+        self.password = password
+
+
 @app.route("/",methods = ['POST','GET'])
 def home():
     if request.method == 'POST':
@@ -53,4 +63,5 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == "__main__":
+    db.create_all()
     app.run(debug = True)
