@@ -1,7 +1,16 @@
 {%extends 'base.html'%}
 {%block title%}Login{%endblock%}
 {%block header%}Login Form{%endblock%}
-{%block content%}    
+{%block content%}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  <ul class=flashes>
+  {% for message in messages %}
+    <li>{{ message }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+{% endwith %}   
 <form>  
     <div class="container">   
         <label>Username : </label>   
