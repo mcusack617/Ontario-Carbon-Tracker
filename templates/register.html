@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%}Register{%endblock%}
+{%block header%}Register{%endblock%}
+{%block content%} 
+<form>
+    <div class="container">   
+        <label>Enter Username : </label>   
+        <input type="text" placeholder="Enter Username" name="username" required>  
+        <p><label>Enter Password : </label><input type="password" placeholder="Enter Password" name="password" required>  </p>   
+        <div style="padding-left: -10px">
+        <p><label>Confirm Password : </label><input type="password" placeholder="Confirm Password" name="password" required>  </p>   
+        <div style="padding-left: 11px">
+        <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Register</button> 
+    </div>
+</form> 
+{%endblock%}

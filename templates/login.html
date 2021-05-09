@@ -1,2 +1,19 @@
 {%extends 'base.html'%}
 {%block title%}Login{%endblock%}
+{%block header%}Login Form{%endblock%}
+{%block content%}    
+<form>  
+    <div class="container">   
+        <label>Username : </label>   
+        <input type="text" placeholder="Enter Username" name="username" required>  
+        
+        <p><label>Password : </label><input type="password" placeholder="Enter Password" name="password" required>  </p>   
+        <div style="padding-left: 12px">
+            <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Login</button> 
+        </div>
+        &nbsp;
+        &nbsp;
+        Create a new <a href="register">account</a>   
+    </div>   
+</form>    
+{%endblock%}
